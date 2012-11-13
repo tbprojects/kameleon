@@ -1,6 +1,8 @@
 require 'kameleon'
 require 'kameleon/ext/rspec/all'
 require 'capybara/webkit'
+require 'pry'
+require 'capybara/poltergeist'
 
 Dir["#{File.expand_path("../", __FILE__)}/support/**/*.rb"].each { |f| require f }
 
@@ -11,3 +13,4 @@ end
 Kameleon.configure do |c|
   c.assets_dir = File.join(File.expand_path("../", __FILE__), 'fixtures', 'assets')
 end
+
